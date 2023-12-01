@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -76,12 +77,15 @@ fun IntroComp(name: String, title: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun ContactInfo(phone: String, email: String, modifier: Modifier = Modifier) {
+fun ContactInfo(work: String, phone: String, email: String, modifier: Modifier = Modifier) {
     Column (
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier,
     ) {
+        Text (
+            text = work,
+        )
         Text (
             text = phone,
         )
@@ -99,9 +103,8 @@ fun FrontScreen() {
         modifier = Modifier
             .background(Color(0xff4efc03))
     ) {
-
-        IntroComp("Michael Ryu", "University of California - Los Angeles Computer Science Graduate", Modifier.weight(3f))
-        ContactInfo("9999999999", "example@gmail.com", Modifier.weight(1f, false))
+        IntroComp(stringResource(R.string.my_name), stringResource(R.string.title), Modifier.weight(3f))
+        ContactInfo(stringResource(R.string.work_status), stringResource(R.string.phone_number), stringResource(R.string.email), Modifier.weight(1f, false))
     }
 }
 

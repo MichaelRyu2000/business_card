@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BusinessCard</string>
     <string name="my_name">Michael Ryu</string>
-    <string name="title">University of California - Los Angeles Computer Science Graduate</string>
+    <string name="title">University of California - Los Angeles&#xA;Computer Science Graduate</string>
     <string name="phone_number">+1 (949) 943 0352</string>
     <string name="email">ryumichael2000@gmail.com</string>
     <string name="work_status">Looking for work!</string>
